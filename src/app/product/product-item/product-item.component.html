@@ -1,0 +1,38 @@
+
+    <div class="col-lg-3 col-md-6">
+        <div href="#" class="card card-product-grid" style="width: 19rem;">
+                <a href="#" class="img-wrap"> 
+                    <img [src]="productItem.imagePath" class="card-img-top image" alt="product"> 
+                </a>
+                <div class="overlay">
+                    <button type="button1" [routerLink]="['/products', productItem.id]" class="btn btn-dark py-2 btn-block">See Product</button>
+                     <button type="button2"  (click)="addToCart()" class="btn btn-dark py-2 text">Add to Cart</button>
+                </div>
+                <div class="card-body border-top text-center">
+                <div class="card-text">
+                    <a href="#" class="card-link title"><h5 class="card-title text-muted">{{ productItem.name }}</h5></a>
+                    <div class="price mt-1">${{ productItem.price }}</div>
+                </div>
+            </div>
+        </div>
+
+<!--
+<div class="row my-4">
+    <div *ngFor = "let product of products" class="col-lg-3 col-md-6 col-sm-12 product-card px-0 my-3">
+    <div href="#" class="container card card-product-grid" style="width: 18rem;">
+            <a href="#" class="img-wrap"> 
+                <img [src]="productItem.imagePath" class="card-img-top image" alt="product"> 
+            </a>
+            <div class="overlay">
+                 <button type="button" class="btn btn-dark py-2 text">Add to Cart</button>
+            </div>
+            <div class="card-body border-top text-center">
+            <div class="card-text">
+                <a href="#" class="card-link title"><h5 class="card-title text-muted">{{ productItem.name }}</h5></a>
+                <div class="price mt-1">{{ productItem.price }}</div>
+            </div>
+        </div>
+       </div>
+     </div>
+    </div>
+    -->
